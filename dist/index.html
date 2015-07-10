@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="eradikalApp">
 <head>
     <meta charset="UTF-8">
     <title>Eradikal Insane</title>
@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <nav>
+        <nav ng-controller="navCtrl" ng-class="{'active' : navOpen}">
             <ul>
                 <li><a href="#">Test</a></li>
                 <li><a href="#">Test</a></li>
@@ -18,14 +18,13 @@
                 <li><a href="#">Test</a></li>
                 <li><a href="#">Test</a></li>
             </ul>
-            <span class="bt"></span>
+            <span class="bt" ng-click="btNav()"></span>
         </nav>
-        <div class="player">
+        <div class="player" ng-controller="playCtrl" ng-class="{'active' : playOpen}">
             <div class="bandcamp">
-                <div class="placeholder"></div>
-                <div class="content">CONTENT</div>
+                <div class="content"><iframe border="0" src="http://bandcamp.com/EmbeddedPlayer/album=3078173212/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/transparent=true/" seamless></iframe></div>
             </div>
-            <span class="bt"></span>
+            <span class="bt" ng-click="btPlay()"></span>
         </div>
 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non nisi in magna ultricies tempus eget id arcu. Maecenas malesuada dolor lectus, vitae tincidunt dui condimentum vel. Curabitur gravida ante scelerisque ante malesuada blandit et sit amet elit. Phasellus lacinia elit sit amet nunc molestie, a vestibulum enim porttitor. Vestibulum leo odio, varius eu ante id, aliquam feugiat felis. Phasellus posuere semper tortor, convallis porta justo auctor sed. Vivamus commodo condimentum sem nec fringilla. In eget tortor nulla. Morbi quis sem aliquam, tristique sem posuere, condimentum leo. Morbi posuere, urna eget cursus molestie, nisi dui vestibulum ligula, et porta dui arcu vel lacus. Duis et tellus sit amet ligula scelerisque hendrerit.

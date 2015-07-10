@@ -1,0 +1,1 @@
+var eradikalApp=angular.module("eradikalApp",[]);eradikalApp.controller("navCtrl",["$scope",function(a){a.btNav=function(){a.navOpen=!a.navOpen}}]),eradikalApp.controller("playCtrl",["$scope","$http",function(a,n){a.btPlay=function(){a.playOpen=!a.playOpen}}]);

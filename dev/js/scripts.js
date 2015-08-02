@@ -1,7 +1,8 @@
 var eradikalApp = angular.module('eradikalApp',[]);
 
 eradikalApp.controller('navCtrl', ['$scope', function($scope) {
-    $scope.btNav = function(){
+    $scope.btNav = function(e){
+        e.stopPropagation();
         $scope.navOpen = !$scope.navOpen;
     };
 }]);

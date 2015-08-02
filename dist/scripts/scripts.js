@@ -1,1 +1,1 @@
-var eradikalApp=angular.module("eradikalApp",[]);eradikalApp.controller("navCtrl",["$scope",function(a){a.btNav=function(){a.navOpen=!a.navOpen}}]),eradikalApp.controller("playCtrl",["$scope","$http",function(a,n){a.btPlay=function(){a.playOpen=!a.playOpen}}]);
+var eradikalApp=angular.module("eradikalApp",[]);eradikalApp.controller("navCtrl",["$scope",function(a){a.btNav=function(p){p.stopPropagation(),a.navOpen=!a.navOpen}}]),eradikalApp.controller("playCtrl",["$scope","$http",function(a,p){a.btPlay=function(){a.playOpen=!a.playOpen}}]);

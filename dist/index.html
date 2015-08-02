@@ -13,7 +13,7 @@
     <div id="logo"></div>
     <div id="car"></div>
     <div id="app">
-        <nav ng-controller="navCtrl" ng-class="{'active' : navOpen}">
+        <nav ng-controller="navCtrl" ng-click="navOpen = false" ng-class="{'active' : navOpen}">
             <ul>
                 <li><a href="#">Test</a></li>
                 <li><a href="#">Test</a></li>
@@ -21,7 +21,7 @@
                 <li><a href="#">Test</a></li>
                 <li><a href="#">Test</a></li>
             </ul>
-            <span data-icon="hamburger" class="bt" ng-click="btNav()"><span class="icon"></span></span>
+            <span data-icon="hamburger" class="bt" ng-click="btNav($event)"><span class="icon"></span></span>
         </nav>
         <div class="player" ng-controller="playCtrl" ng-class="{'active' : playOpen}">
             <div class="bandcamp">

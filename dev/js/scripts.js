@@ -1,4 +1,4 @@
-var eradikalApp = angular.module('eradikalApp',[]);
+var eradikalApp = angular.module('eradikalApp',['ngRoute']);
 
 eradikalApp.controller('navCtrl', ['$scope', function($scope) {
     $scope.btNav = function(e){
@@ -16,3 +16,16 @@ eradikalApp.controller('playCtrl', ['$scope', '$http', function($scope,$http) {
     };
 }]);
 
+
+eradikalApp.config(['$routeProvider', function($routeProvider) {
+
+    $routeProvider
+        .when('/test', {
+            templateUrl: 'partials/test.html'
+        }).when('/test2', {
+            templateUrl: 'partials/test2.html'
+        }).otherwise({
+            redirectTo: '/test'
+        });
+
+}]);

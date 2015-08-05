@@ -9,6 +9,47 @@ $colorRed : #a96c64;
 
 $animDuration : 0.5s;
 
+@keyframes bgAnim {
+  0% {
+    top: 0;
+  }
+
+  40% {
+    top: -25px;
+  }
+
+  60% {
+    top: -25px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes carAnim {
+  0% {
+    right: 0;
+    left: 0;
+  }
+
+  40% {
+    right: 15px;
+    left: 15px;
+  }
+
+  60% {
+    right: 15px;
+    left: 15px;
+  }
+
+  100% {
+    right: 0;
+    left: 0;
+  }
+}
+
+
 [data-icon]{
     max-width:150px;
     position:relative;
@@ -89,6 +130,7 @@ body{
     background:url(../img/bg.jpg) center center no-repeat;
     background-size:cover;
     z-index: 1;
+    //animation:5s bgAnim ease-out infinite;
 }
 #logo{
     position: absolute;
@@ -111,6 +153,8 @@ body{
     background:url(../img/car.png) bottom center no-repeat;
     background-size:contain;
     z-index: 3;
+    animation:5s carAnim ease-out infinite;
+    transform:translateZ(0px);
 }
 #app{
     position: absolute;

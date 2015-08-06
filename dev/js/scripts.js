@@ -16,6 +16,17 @@ eradikalApp.controller('playCtrl', ['$scope', '$http', function($scope,$http) {
     };
 }]);
 
+eradikalApp.controller('viewCtrl', ['$scope', '$element', function($scope,$element) {
+    $scope.$on('$routeChangeStart', function(){
+        $element.addClass('loading');
+    });
+    $scope.$on('$routeChangeSuccess', function(){
+        setTimeout(function(){
+            $element.removeClass('loading');
+        },600);
+    });
+}]);
+
 
 eradikalApp.config(['$routeProvider', function($routeProvider) {
 

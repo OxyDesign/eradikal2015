@@ -13,8 +13,8 @@
     <div id="bg"></div>
     <div id="logo"></div>
     <div id="car"></div>
-    <div id="app">
-        <div ng-view></div>
+    <div id="app" ng-controller="viewCtrl">
+        <div ng-view class="section"></div>
         <nav ng-controller="navCtrl" ng-click="navOpen = false" ng-class="{'active' : navOpen}">
             <ul>
                 <li><a href="#/test">Test</a></li>
@@ -26,7 +26,7 @@
             <div class="bandcamp">
                 <div class="content"><iframe border="0" src="http://bandcamp.com/EmbeddedPlayer/album=3078173212/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/transparent=true/" seamless></iframe></div>
             </div>
-            <span data-icon class="bt" ng-click="btPlay()"><span class="icon"></span></span>
+            <span data-icon="music" class="bt" ng-click="btPlay()"></span>
         </div>
     </div>
 </body>

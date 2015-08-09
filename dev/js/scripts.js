@@ -1,4 +1,4 @@
-var eradikalApp = angular.module('eradikalApp',['ngRoute']);
+var eradikalApp = angular.module('eradikalApp',['ngSanitize','ngRoute']);
 
 eradikalApp.controller('navCtrl', ['$scope', function($scope) {
     $scope.btNav = function(e){
@@ -27,8 +27,9 @@ eradikalApp.controller('viewCtrl', ['$scope', '$element', function($scope,$eleme
     });
 }]);
 
-eradikalApp.controller('page1', ['$scope', '$http', function($scope,$http) {
-    $http.get('data/page1.json')
+eradikalApp.controller('shop', ['$scope', '$http', function($scope,$http) {
+    $scope.baseUrl = 'http://eradikalinsane.bigcartel.com';
+    $http.get('http://api.bigcartel.com/eradikalinsane/products.json')
         .then(function(response){
             $scope.data = response.data;
         },function(response){
@@ -36,24 +37,24 @@ eradikalApp.controller('page1', ['$scope', '$http', function($scope,$http) {
         });
 }]);
 
-eradikalApp.controller('shop', ['$scope', '$http', function($scope,$http) {
-    console.log($http.get);
-    $scope.baseUrl = 'http://eradikalinsane.bigcartel.com';
-    $http.get('http://api.bigcartel.com/eradikalinsane/products.json')
-        .then(function(response){
-            console.log(response);
-            $scope.data = response.data;
-        },function(response){
-
-        });
+eradikalApp.controller('home', ['$scope', function($scope) {
+    twitterFetcher.fetch({
+        id : '447793679625764864',
+        dataOnly:true,
+        customCallback : function(tweets){
+            console.log(tweets);
+            $scope.data = tweets;
+            $scope.$apply();
+        }
+    });
 }]);
 
 eradikalApp.config(['$routeProvider', function($routeProvider) {
 
     $routeProvider
-        .when('/test', {
-            templateUrl: 'partials/test.html',
-            controller: 'page1'
+        .when('/home', {
+            templateUrl: 'partials/home.html',
+            controller: 'home'
         })
         .when('/test2', {
             templateUrl: 'partials/test2.html'
@@ -63,7 +64,7 @@ eradikalApp.config(['$routeProvider', function($routeProvider) {
             controller: 'shop'
         })
         .otherwise({
-            redirectTo: '/test'
+            redirectTo: '/home'
         });
 
 }]);

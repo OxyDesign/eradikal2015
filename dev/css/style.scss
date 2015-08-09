@@ -206,13 +206,58 @@ body{
 
     h1{
         font-size:3rem;
-        padding-bottom:.125rem;
         margin-bottom:1.5rem;
         border-bottom:1px solid $colorRed;
+    }
+    h2{
+        font-size:2rem;
+        margin-bottom:1.5rem;
+        text-align:center;
+    }
+    h3{
+        font-size:1.75rem;
+        margin-bottom:1.25rem;
+        text-align:center;
     }
     p{
         font-size:1.5rem;
         line-height:2rem;
+        margin-bottom:1rem;
+    }
+    .product{
+        padding-bottom:1.5rem;
+        margin-bottom:1.5rem;
+        border-bottom:1px solid $colorRed;
+        a{
+            display:block;
+            text-decoration:none;
+            color:$colorWhite;
+            overflow:hidden;
+        }
+        .price{
+            display:block;
+            color:$colorRed;
+        }
+        img{
+            display:block;
+            width:100%;
+            margin-bottom:1.5rem;
+            box-sizing:border-box;
+            border:1px solid $colorBlack;
+        }
+        ul{
+            display:block;
+            text-align:center;
+            li{
+                font-size:1rem;
+                display:inline-block;
+                padding:0.2rem 0.25rem;
+                border-left:1px solid $colorRed;
+                &:first-child{
+                    border-left:0;
+                }
+            }
+        }
     }
 }
 .player{

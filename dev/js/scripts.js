@@ -30,13 +30,23 @@ eradikalApp.controller('viewCtrl', ['$scope', '$element', function($scope,$eleme
 eradikalApp.controller('page1', ['$scope', '$http', function($scope,$http) {
     $http.get('data/page1.json')
         .then(function(response){
-            console.log(response);
             $scope.data = response.data;
         },function(response){
 
         });
 }]);
 
+eradikalApp.controller('shop', ['$scope', '$http', function($scope,$http) {
+    console.log($http.get);
+    $scope.baseUrl = 'http://eradikalinsane.bigcartel.com';
+    $http.get('http://api.bigcartel.com/eradikalinsane/products.json')
+        .then(function(response){
+            console.log(response);
+            $scope.data = response.data;
+        },function(response){
+
+        });
+}]);
 
 eradikalApp.config(['$routeProvider', function($routeProvider) {
 
@@ -47,6 +57,10 @@ eradikalApp.config(['$routeProvider', function($routeProvider) {
         })
         .when('/test2', {
             templateUrl: 'partials/test2.html'
+        })
+        .when('/shop', {
+            templateUrl: 'partials/shop.html',
+            controller: 'shop'
         })
         .otherwise({
             redirectTo: '/test'

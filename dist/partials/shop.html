@@ -1,0 +1,17 @@
+<h1>Shop</h1>
+<ul>
+    <li ng-repeat="item in data" class="product">
+        <a href="{{baseUrl + item.url}}">
+            <h2>{{item.name}} <span class="price">{{item.price}} €</span></h2>
+            <img ng-src="{{item.images[0].url}}" />
+            <p>{{item.description}}</p>
+            <h3>Options :</h3>
+            <ul>
+                <li ng-repeat="option in item.options">
+                    {{option.name}}
+                </li>
+            </ul>
+        </a>
+    </li>
+</ul>
+

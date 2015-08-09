@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Eradikal Insane</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="styles/style.css"></head>
     <script src="libs/twitterFetcher.js"></script>
     <script src="libs/angular.min.js"></script>
@@ -13,7 +14,7 @@
     <div id="bg"></div>
     <div id="logo"></div>
     <div id="car"></div>
-    <div id="app" ng-controller="viewCtrl">
+    <div id="app" ng-controller="viewCtrl" class="loading">
         <div ng-view class="section"></div>
         <nav ng-controller="navCtrl" ng-click="navOpen = false" ng-class="{'active' : navOpen}">
             <ul>

@@ -27,15 +27,28 @@ eradikalApp.controller('viewCtrl', ['$scope', '$element', function($scope,$eleme
     });
 }]);
 
+eradikalApp.controller('page1', ['$scope', '$http', function($scope,$http) {
+    $http.get('data/page1.json')
+        .then(function(response){
+            console.log(response);
+            $scope.data = response.data;
+        },function(response){
+
+        });
+}]);
+
 
 eradikalApp.config(['$routeProvider', function($routeProvider) {
 
     $routeProvider
         .when('/test', {
-            templateUrl: 'partials/test.html'
-        }).when('/test2', {
+            templateUrl: 'partials/test.html',
+            controller: 'page1'
+        })
+        .when('/test2', {
             templateUrl: 'partials/test2.html'
-        }).otherwise({
+        })
+        .otherwise({
             redirectTo: '/test'
         });
 

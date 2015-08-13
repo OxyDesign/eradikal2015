@@ -37,12 +37,20 @@ eradikalApp.controller('shop', ['$scope', '$http', function($scope,$http) {
         });
 }]);
 
+eradikalApp.controller('shows', ['$scope', '$http', function($scope,$http) {
+    $http({method: 'jsonp', url: 'http://api.bandsintown.com/artists/EradikalInsane/events.json?api_version=2.0&app_id=ei2015&callback=JSON_CALLBACK'})
+        .then(function(response){
+            $scope.data = response.data;
+        },function(response){
+
+        });
+}]);
+
 eradikalApp.controller('home', ['$scope', function($scope) {
     twitterFetcher.fetch({
         id : '447793679625764864',
         dataOnly:true,
         customCallback : function(tweets){
-            console.log(tweets);
             $scope.data = tweets;
             $scope.$apply();
         }
@@ -56,8 +64,9 @@ eradikalApp.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'partials/home.html',
             controller: 'home'
         })
-        .when('/test2', {
-            templateUrl: 'partials/test2.html'
+        .when('/shows', {
+            templateUrl: 'partials/shows.html',
+            controller: 'shows'
         })
         .when('/shop', {
             templateUrl: 'partials/shop.html',

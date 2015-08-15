@@ -27,6 +27,15 @@ eradikalApp.controller('viewCtrl', ['$scope', '$element', function($scope,$eleme
     });
 }]);
 
+eradikalApp.controller('band', ['$scope', '$http', function($scope,$http) {
+    $http.get('data/band.json')
+        .then(function(response){
+            $scope.data = response.data;
+        },function(response){
+
+        });
+}]);
+
 eradikalApp.controller('shop', ['$scope', '$http', function($scope,$http) {
     $scope.baseUrl = 'http://eradikalinsane.bigcartel.com';
     $http.get('http://api.bigcartel.com/eradikalinsane/products.json')
@@ -85,6 +94,10 @@ eradikalApp.config(['$routeProvider', function($routeProvider) {
         .when('/home', {
             templateUrl: 'partials/home.html',
             controller: 'home'
+        })
+        .when('/band', {
+            templateUrl: 'partials/band.html',
+            controller: 'band'
         })
         .when('/shows', {
             templateUrl: 'partials/shows.html',

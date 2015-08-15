@@ -1,0 +1,14 @@
+<h1>Band</h1>
+<img ng-if="data.img" ng-src="{{data.img}}" class="band-image" />
+<h2>Line Up</h2>
+<ul>
+    <li ng-repeat="member in data.lineup" class="member">
+        <h3>{{member.name}} - {{member.instrument}}</h3>
+    </li>
+</ul>
+<h2>Bio</h2>
+<div>
+    <p ng-repeat="p in data.bio" class="bio">
+        {{p}}
+    </p>
+</div>

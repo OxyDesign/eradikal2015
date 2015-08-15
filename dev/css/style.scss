@@ -248,6 +248,37 @@ body{
             border:1px solid $colorBlack;
         }
     }
+    .band-image{
+        display:block;
+        width:100%;
+        margin-bottom:1.5rem;
+        box-sizing:border-box;
+    }
+    .member{
+        &:first-child{
+            padding-top:1.5rem;
+            border-top:1px solid $colorRed;
+        }
+        &:last-child{
+            border-bottom:1px solid $colorRed;
+            padding-bottom:1.5rem;
+            margin-bottom:1.5rem;
+        }
+    }
+    .bio{
+        &:first-child{
+            padding-top:1.5rem;
+            border-top:1px solid $colorRed;
+        }
+        &:last-child{
+            border-bottom:1px solid $colorRed;
+            padding-bottom:1.5rem;
+        }
+        &:first-letter{
+            color:$colorRed;
+            font-size:2.5rem;
+        }
+    }
     .show{
         padding-top:1.5rem;
         margin-top:1.5rem;

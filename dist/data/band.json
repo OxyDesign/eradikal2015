@@ -1,0 +1,38 @@
+{
+    "img":"content/band/band.jpg",
+    "lineup":[
+        {
+            "name":"Loris",
+            "instrument":"Bass"
+        },
+        {
+            "name":"Nico",
+            "instrument":"Guitars"
+        },
+        {
+            "name":"J.Trom",
+            "instrument":"Vocals"
+        },
+        {
+            "name":"Flo",
+            "instrument":"Guitars & Backing Vocals"
+        },
+        {
+            "name":"R",
+            "instrument":"Drums"
+        }
+    ],
+    "bio" :[
+        "The band arose in November 2004 from Bury Human Fears' ashes, a metalcore band from Marseille, already led by both guitarist brothers Flo and Nico.",
+        "After changes of line-up, the band changed its name for ERADIKAL INSANE, neologism to describe a madman at his most disturbed stage.",
+        "Buoyed by this new identity and new members, the combo continued to clear its road among the local scene. This period also marked a first bend in the musical evolution, playing now deathcore.",
+        "2007 struck a blow to the band's furtherance. Léo and Thomas left, interrupting the demo recording. In October of the same year, R joined the ranks as drummer, followed by Math (ex-Saïkon's guitarist) as hxc singer.",
+        "They finished the recording of their demo at the beginning of 2008, which contains their moshing anthem « Deathcore United ». Shortly after Julo, who poured his guttural growls since the very first day, decided to leave the band. J.Trom will quickly come to replace him.",
+        "They went on playing shows and distanced themselves with their loud aggressiveness.",
+        "In 2009, they had a recording try, which turned out quite decisive. « Born From Punishment » had a good reception, and allowed to hoist the combo on the 3rd place during a springboard in Marseille. Pierre gave up bass player's post later, preferring to dedicate himself to his side-project.",
+        "ERADIKAL INSANE became a quintet as Math took the bass and carried out backing vocals with Flo. J.Trom henceforth is the lead singer. The process of composition changed, evolved. Matured. The band plays its own deathcore, a real summary of the members' influences. Songs are faster and more extreme, supported by virulent blast beats.",
+        "2010 marked definitively a step forward in the combo's story. Repeating the springboard experience, they reached the 1st place after a devastating set. They won the great opportunity to record for the first time in professional studio.",
+        "In September 2010, ERADIKAL INSANE entered Hypérion studios for the recording of the first EP \"The Dementia Process\" - 5 powerful tracks of furious energy and grim lyrics, receptacle of an introspective suffering.",
+        "The EP \"The Dementia Process\" is out since April 16th, 2011. The band intends to defend and share its music on stage with an always-increasing audience."
+    ]
+}

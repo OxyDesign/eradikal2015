@@ -259,6 +259,13 @@ body{
             color:$colorRed;
         }
     }
+    .video{
+        padding:1.5rem 0;
+        border-bottom:1px solid $colorRed;
+        iframe{
+            width:100%;
+        }
+    }
     .product{
         padding-bottom:1.5rem;
         margin-bottom:1.5rem;

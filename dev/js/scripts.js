@@ -37,6 +37,19 @@ eradikalApp.controller('shop', ['$scope', '$http', function($scope,$http) {
         });
 }]);
 
+eradikalApp.controller('videos', ['$scope', '$http', '$sce', function($scope,$http,$sce) {
+    var baseUrl = 'http://www.youtube.com/embed/';
+    $http.get('data/videos.json')
+        .then(function(response){
+            response.data.forEach(function(v){
+                v.url = $sce.trustAsResourceUrl(baseUrl+v.id);
+            });
+            $scope.data = response.data;
+        },function(response){
+
+        });
+}]);
+
 eradikalApp.controller('shows', ['$scope', '$http', function($scope,$http) {
     $http({method: 'jsonp', url: 'http://api.bandsintown.com/artists/EradikalInsane/events.json?api_version=2.0&app_id=ei2015&callback=JSON_CALLBACK'})
         .then(function(response){
@@ -67,6 +80,10 @@ eradikalApp.config(['$routeProvider', function($routeProvider) {
         .when('/shows', {
             templateUrl: 'partials/shows.html',
             controller: 'shows'
+        })
+        .when('/videos', {
+            templateUrl: 'partials/videos.html',
+            controller: 'videos'
         })
         .when('/shop', {
             templateUrl: 'partials/shop.html',

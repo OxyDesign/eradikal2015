@@ -1,0 +1,21 @@
+[
+    {
+        "name":"Management",
+        "phone":"+33632287656",
+        "email":"management [at] eradikal-insane.com"
+    },
+    {
+        "name":"Artwork",
+        "link":{
+            "name":"Hrtz.Dsign",
+            "url":"https://www.facebook.com/HrtzDsign"
+        }
+    },
+    {
+        "name":"Website",
+        "link":{
+            "name":"OxyDesign",
+            "url":"http://www.oxydesign.fr"
+        }
+    }
+]

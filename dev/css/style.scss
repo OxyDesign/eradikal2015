@@ -301,6 +301,27 @@ body{
             }
         }
     }
+    .links{
+        display:block;
+        overflow:hidden;
+        border-bottom:1px solid $colorRed;
+        border-top:1px solid $colorRed;
+        margin-bottom:1.5rem;
+    }
+    .link{
+        display:block;
+        float:left;
+        width:50%;
+        a{
+            display:block;
+            text-align:center;
+            font-size:2rem;
+            padding:1rem 0;
+            text-decoration:none;
+            color:$colorWhite;
+            overflow:hidden;
+        }
+    }
 }
 .player{
     transition:margin-top $animDuration ease;

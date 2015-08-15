@@ -1,0 +1,46 @@
+{
+    "listen" :[
+        {
+            "url":"http://itunes.apple.com/fr/album/the-dementia-process-ep/id426525155",
+            "name":"iTunes"
+        },
+        {
+            "url":"http://www.deezer.com/music/eradikal-insane/the-dementia-process-938103",
+            "name":"Deezer"
+        },
+        {
+            "url":"http://www.amazon.fr/The-Dementia-Process/dp/B004S9JPFA",
+            "name":"Amazon"
+        },
+        {
+            "url":"http://telecharger-musique.fnac.com/fm10392157/Eradikal-Insane-The-Dementia-Process",
+            "name":"Fnac"
+        },
+        {
+            "url":"http://music.napster.com/eradikal-insane-music/album/the-dementia-process/14197203",
+            "name":"Napster"
+        }
+    ],
+    "share": [
+        {
+            "url":"http://www.facebook.com/EradikalInsane",
+            "name":"Facebook"
+        },
+        {
+            "url":"http://twitter.com/EradikalInsane",
+            "name":"Twitter"
+        },
+        {
+            "url":"http://www.youtube.com/eradikalinsane",
+            "name":"YouTube"
+        },
+        {
+            "url":"http://www.purevolume.com/eradikalinsane",
+            "name":"PureVolume"
+        },
+        {
+            "url":"http://www.soundcloud.com/eradikalinsane",
+            "name":"Soundcloud"
+        }
+    ]
+}

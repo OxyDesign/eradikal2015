@@ -1,0 +1,14 @@
+<h1>Links</h1>
+<h2>Listen</h2>
+<ul class="links">
+    <li ng-repeat="link in data.listen" class="link">
+        <a href="{{link.url}}">{{link.name}}</a>
+    </li>
+</ul>
+<h2>Follow</h2>
+<ul class="links">
+    <li ng-repeat="link in data.share" class="link">
+        <a href="{{link.url}}">{{link.name}}</a>
+    </li>
+</ul>
+

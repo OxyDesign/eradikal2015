@@ -68,6 +68,15 @@ eradikalApp.controller('shows', ['$scope', '$http', function($scope,$http) {
         });
 }]);
 
+eradikalApp.controller('reviews', ['$scope', '$http', function($scope,$http) {
+    $http.get('data/reviews.json')
+        .then(function(response){
+            $scope.data = response.data;
+        },function(response){
+
+        });
+}]);
+
 eradikalApp.controller('links', ['$scope', '$http', function($scope,$http) {
     $http.get('data/links.json')
         .then(function(response){
@@ -110,6 +119,10 @@ eradikalApp.config(['$routeProvider', function($routeProvider) {
         .when('/shop', {
             templateUrl: 'partials/shop.html',
             controller: 'shop'
+        })
+        .when('/reviews', {
+            templateUrl: 'partials/reviews.html',
+            controller: 'reviews'
         })
         .when('/links', {
             templateUrl: 'partials/links.html',

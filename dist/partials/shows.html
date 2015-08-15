@@ -3,12 +3,14 @@
 <ul>
     <li ng-repeat="show in data" class="show">
         <h3>{{show.title}}</h3>
-        <p>{{show.formatted_datetime}}</p>
-        <p>{{show.formatted_location}}</p>
-        <p><a ng-href="{{show.ticket_url}}" ng-if="show.ticket_url">Ticket Url</a></p>
-        <p><a ng-href="{{show.facebook_rsvp_url}}">Link Bandsintown</a></p>
-        <p ng-bind="show.description"></p>
-        <p><a ng-href="http://maps.google.com/?q={{show.venue.latitude}},{{show.venue.longitude}}">Map for : {{show.venue.name}},{{show.venue.city}}, {{show.venue.country}}, {{show.venue.region}}</a></p>
+        <p class="date">{{show.formatted_datetime}}</p>
+        <p class="ticket"><a ng-href="{{show.ticket_url}}" ng-if="show.ticket_url">Ticket</a></p>
+        <p class="link"><a ng-href="{{show.facebook_rsvp_url}}">Bandsintown</a></p>
+        <p class="description" ng-bind="show.description"></p>
+        <p class="location">
+            <a data-icon="location" ng-href="http://maps.google.com/?q={{show.venue.latitude}},{{show.venue.longitude}}"></a>
+            <span class="address"><span class="address-inner">{{show.venue.name}},{{show.venue.city}}, {{show.venue.country}}, {{show.venue.region}}</span></span>
+        </p>
     </li>
 </ul>
 

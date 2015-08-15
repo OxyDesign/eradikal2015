@@ -348,31 +348,36 @@ nav{
     background:transparentize($colorBlack, 0.2);
     z-index: 6;
 
-    ul{
-        padding:20% 20% 20% 25%;
-        overflow-y:auto;
+    .inner-nav{
+        padding:20%;
         height:100%;
         font-size:2.5rem;
         position:relative;
-        li{
-            color:$colorRed;
-            list-style:upper-roman outside none;
-            text-shadow:0 0 10px $colorWhite;
-            a{
-                padding:5% 15%;
-                margin-left:-15%;
-                text-shadow:0 0 10px $colorGrey;
-                color:$colorWhite;
-                display:block;
-                border-bottom:1px solid transparentize($colorGrey, 0.2);
-                text-decoration:none;
+        box-sizing:border-box;
+        ul{
+            padding-left:23%;
+            overflow-y:auto;
+            height:100%;
+            li{
+                color:$colorRed;
+                list-style:upper-roman outside none;
+                text-shadow:0 0 10px $colorWhite;
+                a{
+                    padding:7% 0 7% 25%;
+                    margin-left:-30%;
+                    text-shadow:0 0 10px $colorGrey;
+                    color:$colorWhite;
+                    display:block;
+                    border-bottom:1px solid transparentize($colorGrey, 0.2);
+                    text-decoration:none;
 
-                &:first-child{
-                    border-top:1px solid transparentize($colorGrey, 0.2);
+                    &:first-child{
+                        border-top:1px solid transparentize($colorGrey, 0.2);
+                    }
                 }
-            }
-            &:after{
+                &:after{
 
+                }
             }
         }
     }

@@ -18,11 +18,13 @@
     <div id="app" ng-controller="viewCtrl" class="loading">
         <div ng-view class="section"></div>
         <nav ng-controller="navCtrl" ng-click="navOpen = false" ng-class="{'active' : navOpen}">
-            <ul>
-                <li><a href="#/home">Home</a></li>
-                <li><a href="#/shows">Shows</a></li>
-                <li><a href="#/shop">Shop</a></li>
-            </ul>
+            <div class="inner-nav">
+                <ul>
+                    <li><a href="#/home">Home</a></li>
+                    <li><a href="#/shows">Shows</a></li>
+                    <li><a href="#/shop">Shop</a></li>
+                </ul>
+            </div>
             <span data-icon="hamburger" class="bt" ng-click="btNav($event)"><span class="icon"></span></span>
         </nav>
         <div class="player" ng-controller="playCtrl" ng-class="{'active' : playOpen}">

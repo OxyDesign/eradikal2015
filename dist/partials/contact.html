@@ -1,6 +1,6 @@
 <h1>Contact</h1>
 <ul>
-    <li ng-repeat="contact in data" class="contact">
+    <li ng-repeat="contact in data" class="contact" data-col="33">
         <h2>{{contact.name}}</h2>
         <p ng-if="contact.link"><a href="{{contact.link.url}}">{{contact.link.name}}</a></p>
         <p ng-if="contact.email">{{contact.email}}</p>

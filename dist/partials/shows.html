@@ -1,7 +1,7 @@
 <h1>Shows</h1>
 <h2>Upcoming</h2>
 <ul>
-    <li ng-repeat="show in data" class="show">
+    <li ng-repeat="show in data" class="show" data-col="33">
         <h3>{{show.title}}</h3>
         <p class="date">{{show.formatted_datetime}}</p>
         <p class="ticket"><a ng-href="{{show.ticket_url}}" ng-if="show.ticket_url">Ticket</a></p>

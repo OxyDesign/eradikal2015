@@ -7,6 +7,8 @@ $colorDarkGrey : #333333;
 $colorBlack : #000000;
 $colorRed : #a96c64;
 
+$breakpoint-medium: "(min-width: 768px)";
+
 $animDuration : 0.5s;
 
 @keyframes bgAnim {
@@ -303,6 +305,7 @@ body{
         padding-top:1.5rem;
         margin-top:1.5rem;
         border-top:1px solid $colorRed;
+        word-break:break-word;
         &:last-child{
             border-bottom:1px solid $colorRed;
         }
@@ -412,8 +415,22 @@ body{
     .video{
         padding:1.5rem 0;
         border-bottom:1px solid $colorRed;
-        iframe{
-            width:100%;
+        position: relative;
+        padding-bottom:57%;
+        .video-inner{
+            top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            margin:5%;
+            position:absolute;
+            iframe{
+                top:0;
+                height:100%;
+                left:0;
+                width:100%;
+                position:absolute;
+            }
         }
     }
     .product{
@@ -631,6 +648,121 @@ nav{
         }
         .social-links{
             bottom:0;
+        }
+    }
+}
+@media #{$breakpoint-medium} {
+    [data-col]{
+        box-sizing:border-box;
+        float:left;
+        padding:0 2% 0 2%;
+        &[data-col*="25"]{
+            width:25%;
+        }
+        &[data-col*="33"]{
+            width:33.33333%;
+        }
+        &[data-col*="50"]{
+            width:50%;
+        }
+        &[data-col*="66"]{
+            width:66.66666%;
+        }
+        &[data-col*="75"]{
+            width:75%;
+        }
+    }
+    .section{
+        margin-top:5%;
+        right:5%;
+        margin-bottom:5%;
+        left:5%;
+        background:transparentize($colorBlack, 0.25);
+        .video{
+            padding-bottom:29.25%;
+        }
+        .tweet{
+            border-left:1px solid $colorRed;
+            border-top:0;
+            margin-bottom:2rem;
+            &:nth-child(3n+1){
+                clear:left;
+            }
+            &:last-child{
+                border-bottom:0;
+            }
+            h3{
+                text-align:left;
+            }
+            img{
+                width:25%;
+                float:left;
+                margin:0 5% 5% 0;
+            }
+        }
+        .members{
+            text-align:center;
+            border-top:1px solid $colorRed;
+            border-bottom:1px solid $colorRed;
+            padding-top:1.5rem;
+            margin-bottom:1.5rem;
+        }
+        .member{
+            display:inline-block;
+            border-left:1px solid $colorRed;
+            &:first-child{
+                border-top:0;
+                border-left:0;
+                padding:0;
+            }
+            &:last-child{
+                border-bottom:0;
+                padding:0;
+            }
+            h3{
+                margin:0;
+                padding:0.5rem 1.25rem;
+            }
+        }
+        .show{
+            border-left:1px solid $colorRed;
+            border-top:0;
+            margin-bottom:2rem;
+            &:nth-child(3n+1){
+                clear:left;
+            }
+            &:last-child{
+                border-bottom:0;
+            }
+            h3{
+                text-align:left;
+            }
+        }
+        .product{
+            text-align:center;
+            margin-bottom:0;
+            border-bottom:0;
+            &:nth-child(n+3){
+                padding-top:1.5rem;
+                border-top:1px solid $colorRed;
+            }
+            &:nth-child(2n+1){
+                clear:left;
+            }
+            img{
+                width:50%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+        }
+    }
+    .player{
+        width:30%;
+    }
+    nav{
+        width:25%;
+        &.active{
+            left:75%;
         }
     }
 }

@@ -1,7 +1,9 @@
 <h1>Videos</h1>
 <ul>
-    <li ng-repeat="video in data" class="video">
-        <iframe type="text/html" ng-src="{{video.url}}" frameborder="0" />
+    <li ng-repeat="video in data" class="video" data-col="50">
+        <div class="video-inner">
+            <iframe type="text/html" ng-src="{{video.url}}" frameborder="0"></iframe>
+        </div>
     </li>
 </ul>
 

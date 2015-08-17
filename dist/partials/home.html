@@ -1,10 +1,9 @@
 <h1>Home</h1>
-<h2>Tweets</h2>
+<h2>Latest Tweets</h2>
 <ul>
-    <li ng-repeat="tweet in data" class="tweet">
+    <li ng-repeat="tweet in data" class="tweet" data-col="33">
         <h3><a href="{{tweet.permalinkURL}}">{{tweet.time}}</a></h3>
         <img ng-if="tweet.image" ng-src="{{tweet.image}}" />
         <p ng-bind-html="tweet.tweet"></p>
     </li>
 </ul>
-

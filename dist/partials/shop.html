@@ -1,6 +1,6 @@
 <h1>Shop</h1>
 <ul>
-    <li ng-repeat="item in data" class="product">
+    <li ng-repeat="item in data" class="product" data-col="50">
         <a href="{{baseUrl + item.url}}">
             <h2>{{item.name}} <span class="price">{{item.price}} €</span></h2>
             <img ng-src="{{item.images[0].url}}" />

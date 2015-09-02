@@ -8,6 +8,7 @@ $colorBlack : #000000;
 $colorRed : #a96c64;
 
 $breakpoint-medium: "(min-width: 768px)";
+$breakpoint-large: "(min-width: 1200px)";
 
 $animDuration : 0.5s;
 
@@ -313,7 +314,6 @@ body{
             display:block;
             text-decoration:none;
             color:$colorWhite;
-            overflow:hidden;
         }
         p a{
             color:$colorRed;
@@ -764,5 +764,15 @@ nav{
         &.active{
             left:75%;
         }
+    }
+}
+@media #{$breakpoint-large} {
+    .section{
+        left:auto;
+        width:75%;
+    }
+    #car{
+        background-position:left bottom;
+        margin-left:-3%;
     }
 }

@@ -6,7 +6,7 @@
         <p class="date">{{show.formatted_datetime}}</p>
         <p class="ticket"><a ng-href="{{show.ticket_url}}" ng-if="show.ticket_url">Ticket</a></p>
         <p class="link"><a ng-href="{{show.facebook_rsvp_url}}">Bandsintown</a></p>
-        <p class="description" ng-bind="show.description"></p>
+        <p class="description" ng-show="show.description" ng-bind="show.description"></p>
         <p class="location">
             <a data-icon="location" ng-href="http://maps.google.com/?q={{show.venue.latitude}},{{show.venue.longitude}}"></a>
             <span class="address"><span class="address-inner">{{show.venue.name}},{{show.venue.city}}, {{show.venue.country}}, {{show.venue.region}}</span></span>

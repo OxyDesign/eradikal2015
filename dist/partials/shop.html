@@ -1,5 +1,15 @@
 <h1>Shop</h1>
 <ul>
+    <li class="product" data-col="50">
+        <a href="http://eradikalinsane.bandcamp.com/album/mithra">
+            <h2>Mithra <span class="price">10 / 12 €</span></h2>
+            <div class="cd">
+                <iframe border="0" src="http://bandcamp.com/EmbeddedPlayer/album=2942184278/size=large/bgcol=333333/linkcol=ffffff/minimal=true/transparent=true/" seamless><a href="http://eradikalinsane.bandcamp.com/album/mithra">Mithra by Eradikal Insane</a></iframe>
+            </div>
+            <p>New album 'Mithra' featuring guest vocals of Triv (Kronos), Julien Truchan (Benighted) & Sven De Caluwé (Aborted).</p>
+            <p>Limited edition digipack (1000 copies). Artworks by Hrtz.Dsign.</p>
+        </a>
+    </li>
     <li ng-repeat="item in data" class="product" data-col="50">
         <a href="{{baseUrl + item.url}}">
             <h2>{{item.name}} <span class="price">{{item.price}} €</span></h2>

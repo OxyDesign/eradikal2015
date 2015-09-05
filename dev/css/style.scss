@@ -481,6 +481,22 @@ body{
         padding-bottom:1.5rem;
         margin-bottom:1.5rem;
         border-bottom:1px solid $colorRed;
+        .cd{
+            position:relative;
+            width:100%;
+            margin-bottom:1.5rem;
+            padding-bottom:100%;
+            iframe{
+                position:absolute;
+                top:0;
+                left:0;
+                display:block;
+                border:0;
+                width:100%;
+                height:100%;
+                margin:0;
+            }
+        }
         a{
             display:block;
             text-decoration:none;
@@ -846,6 +862,12 @@ nav{
             }
             &:nth-child(2n+1){
                 clear:left;
+            }
+            .cd{
+                width:50%;
+                margin-left:auto;
+                margin-right:auto;
+                padding-bottom:50%;
             }
             img{
                 width:50%;

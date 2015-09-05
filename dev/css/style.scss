@@ -843,4 +843,14 @@ nav{
         background-position:left bottom;
         margin-left:-3%;
     }
+    .player{
+        right:0;
+        left:auto;
+
+        [data-icon]{
+            top:-10px;
+            right:10px;
+            left:auto;
+        }
+    }
 }

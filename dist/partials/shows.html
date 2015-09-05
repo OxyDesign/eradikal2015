@@ -1,11 +1,35 @@
 <h1>Shows</h1>
-<h2>Upcoming</h2>
-<ul>
-    <li ng-repeat="show in data" class="show" data-col="33">
+<h2 class="show-title">Upcoming</h2>
+<div data-col="33 right">
+    <img ng-if="data.imgs.img1" ng-src="{{data.imgs.img1}}" class="show-image" />
+</div>
+<ul data-col="66">
+    <li ng-repeat="show in data.shows.upcoming" class="show" data-col="33">
         <h3>{{show.title}}</h3>
         <p class="date">{{show.formatted_datetime}}</p>
-        <p class="ticket"><a ng-href="{{show.ticket_url}}" ng-if="show.ticket_url">Ticket</a></p>
-        <p class="link"><a ng-href="{{show.facebook_rsvp_url}}">Bandsintown</a></p>
+        <div class="ext-links">
+            <p class="ticket" ng-if="show.ticket_url"><a ng-href="{{show.ticket_url}}">Ticket</a></p>
+            <p class="link" ng-if="show.facebook_rsvp_url"><a ng-href="{{show.facebook_rsvp_url}}">Bandsintown</a></p>
+        </div>
+        <p class="description" ng-show="show.description" ng-bind="show.description"></p>
+        <p class="location">
+            <a data-icon="location" ng-href="http://maps.google.com/?q={{show.venue.latitude}},{{show.venue.longitude}}"></a>
+            <span class="address"><span class="address-inner">{{show.venue.name}},{{show.venue.city}}, {{show.venue.country}}, {{show.venue.region}}</span></span>
+        </p>
+    </li>
+</ul>
+<h2 class="show-title">Past</h2>
+<div data-col="33 right">
+    <img ng-if="data.imgs.img2" ng-src="{{data.imgs.img2}}" class="show-image" />
+</div>
+<ul data-col="66">
+    <li ng-repeat="show in data.shows.past" class="show" data-col="33">
+        <h3>{{show.title}}</h3>
+        <p class="date">{{show.formatted_datetime}}</p>
+        <div class="ext-links">
+            <p class="ticket" ng-if="show.ticket_url"><a ng-href="{{show.ticket_url}}">Ticket</a></p>
+            <p class="link" ng-if="show.facebook_rsvp_url"><a ng-href="{{show.facebook_rsvp_url}}">Bandsintown</a></p>
+        </div>
         <p class="description" ng-show="show.description" ng-bind="show.description"></p>
         <p class="location">
             <a data-icon="location" ng-href="http://maps.google.com/?q={{show.venue.latitude}},{{show.venue.longitude}}"></a>

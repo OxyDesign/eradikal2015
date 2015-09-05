@@ -332,6 +332,12 @@ body{
         margin-bottom:1.5rem;
         box-sizing:border-box;
     }
+    .show-image{
+        display:block;
+        width:100%;
+        margin-bottom:1.5rem;
+        box-sizing:border-box;
+    }
     .member{
         &:first-child{
             padding-top:1.5rem;
@@ -356,6 +362,14 @@ body{
             color:$colorRed;
             font-size:2.5rem;
         }
+    }
+    .show-title{
+        clear:both;
+        border-bottom:1px solid $colorRed;
+        padding-bottom:1.5rem;
+    }
+    ul + .show-title{
+        padding-top:1.5rem;
     }
     .show{
         padding-top:1.5rem;
@@ -388,6 +402,7 @@ body{
         }
         .description{
             clear:both;
+            word-break:break-word;
         }
         .location{
             clear:both;
@@ -656,6 +671,9 @@ nav{
         box-sizing:border-box;
         float:left;
         padding:0 2% 0 2%;
+        &[data-col*="right"]{
+            float:right;
+        }
         &[data-col*="25"]{
             width:25%;
         }
@@ -724,18 +742,68 @@ nav{
                 padding:0.5rem 1.25rem;
             }
         }
+        ul + .show-title{
+            border-top:1px solid $colorRed;
+        }
         .show{
-            border-left:1px solid $colorRed;
-            border-top:0;
             margin-bottom:2rem;
-            &:nth-child(3n+1){
-                clear:left;
-            }
+            border-top:0;
+            float:none;
+            clear:both;
+            overflow:hidden;
+            position:relative;
+            width:100%;
+            border-bottom:1px solid $colorRed;
             &:last-child{
                 border-bottom:0;
             }
             h3{
                 text-align:left;
+                float:left;
+                margin:15px 0;
+                min-height:30px;
+                width:45%;
+            }
+            .date{
+                position:absolute;
+                text-align:left;
+                left:0;
+                top:0;
+                width:70%;
+            }
+            .location{
+                position:absolute;
+                text-align:right;
+                right:0;
+                top:0;
+                width:30%;
+                min-height:60px;
+                margin-bottom:0;
+                [data-icon]{
+                    position:absolute;
+                    right:0;
+                    top:0;
+                }
+                .address{
+                    right:70px;
+                    left:0;
+                    word-break:break-word;
+                }
+            }
+            .ext-links{
+                float:left;
+                width:25%;
+                min-height:30px;
+                margin:0 0 15px;
+            }
+            .ticket,
+            .link{
+                margin:0;
+                text-align:center;
+            }
+            .description{
+                clear:both;
+                text-align:center;
             }
         }
         .product{
@@ -770,66 +838,6 @@ nav{
     .section{
         left:auto;
         width:75%;
-        .show{
-            float:none;
-            clear:both;
-            overflow:hidden;
-            position:relative;
-            width:100%;
-            border-left:0;
-            border-bottom:1px solid $colorRed;
-            &:last-child{
-                border-bottom:1px solid $colorRed;
-            }
-            h3{
-                float:left;
-                margin:15px 0 0;
-                min-height:45px;
-                width:50%;
-            }
-            .date{
-                position:absolute;
-                text-align:left;
-                left:0;
-                top:0;
-                width:80%;
-            }
-            .location{
-                position:absolute;
-                text-align:right;
-                right:0;
-                top:0;
-                width:20%;
-                min-height:60px;
-                margin-bottom:0;
-                [data-icon]{
-                    position:absolute;
-                    right:0;
-                    top:0;
-                }
-                .address{
-                    right:70px;
-                    left:0;
-                    word-break:break-word;
-                }
-            }
-            .ticket{
-                float:left;
-                width:15%;
-                margin:15px 0 0;
-                min-height:45px;
-            }
-            .link{
-                float:left;
-                width:15%;
-                margin:15px 0 0;
-                min-height:45px;
-            }
-            .description{
-                clear:both;
-                text-align:center;
-            }
-        }
     }
     #car{
         background-position:left bottom;

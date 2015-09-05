@@ -60,9 +60,38 @@ eradikalApp.controller('videos', ['$scope', '$http', '$sce', function($scope,$ht
 }]);
 
 eradikalApp.controller('shows', ['$scope', '$http', function($scope,$http) {
-    $http({method: 'jsonp', url: 'http://api.bandsintown.com/artists/EradikalInsane/events.json?api_version=2.0&app_id=ei2015&callback=JSON_CALLBACK'})
+    $scope.data = {};
+    $http.get('data/shows.json')
         .then(function(response){
-            $scope.data = response.data;
+            $scope.data.imgs = response.data;
+        },function(response){
+
+        });
+
+    $http({method: 'jsonp', url: 'http://api.bandsintown.com/artists/EradikalInsane/events.json?api_version=2.0&app_id=ei2015&date=all&callback=JSON_CALLBACK'})
+        .then(function(response){
+            var rawData = response.data,
+                currentDate = new Date(),
+                isUpcoming = false,
+                arrPast = [],
+                arrUpcoming = [],
+                arrCurrent = arrPast,
+                methodCurrent = 'unshift';
+
+            for(var i = 0, lgth = rawData.length; i < lgth; i++){
+                var show = rawData[i];
+                if(!isUpcoming && new Date(show.datetime) > currentDate){
+                    isUpcoming = true;
+                    arrCurrent = arrUpcoming;
+                    methodCurrent = 'push';
+                }
+                arrCurrent[methodCurrent](show);
+            }
+
+            $scope.data.shows = {
+                past:arrPast,
+                upcoming:arrUpcoming
+            };
         },function(response){
 
         });

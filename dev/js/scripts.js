@@ -124,12 +124,41 @@ eradikalApp.controller('links', ['$scope', '$http', function($scope,$http) {
         });
 }]);
 
-eradikalApp.controller('home', ['$scope', function($scope) {
+eradikalApp.controller('home', ['$scope', '$http', function($scope,$http) {
+    var enteredAndClicked = false;
+    $scope.data = {};
+    $scope.flipped = false;
+
+    $scope.flipImage = function(str){
+        switch (str){
+            case 'enter' :
+                enteredAndClicked = false;
+                $scope.flipped = true;
+                break;
+
+            case 'leave' :
+                $scope.flipped = false;
+                break;
+
+            case 'click' :
+                if(!enteredAndClicked) enteredAndClicked = true;
+                else $scope.flipped = !$scope.flipped;
+                break;
+        }
+    };
+
+    $http.get('data/home.json')
+        .then(function(response){
+            $scope.data.imgs = response.data;
+        },function(response){
+
+        });
+
     twitterFetcher.fetch({
         id : '447793679625764864',
         dataOnly:true,
         customCallback : function(tweets){
-            $scope.data = tweets;
+            $scope.data.tweets = tweets;
             $scope.$apply();
         }
     });

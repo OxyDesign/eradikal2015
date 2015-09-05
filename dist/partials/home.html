@@ -1,9 +1,19 @@
 <h1>Home</h1>
-<h2>Latest Tweets</h2>
-<ul>
-    <li ng-repeat="tweet in data" class="tweet" data-col="33">
-        <h3><a href="{{tweet.permalinkURL}}">{{tweet.time}}</a></h3>
-        <img ng-if="tweet.image" ng-src="{{tweet.image}}" />
-        <p ng-bind-html="tweet.tweet"></p>
-    </li>
-</ul>
+<div data-col="33">
+    <div class="flip-container" ng-click="flipImage('click')" ng-mouseenter="flipImage('enter')" ng-mouseleave="flipImage('leave')" ng-class="{flipped:flipped}">
+        <div class="inside-container">
+            <img ng-if="data.imgs.img1" ng-src="{{data.imgs.img1}}" class="home-image front-image" />
+            <img ng-if="data.imgs.img2" ng-src="{{data.imgs.img2}}" class="home-image back-image" />
+        </div>
+    </div>
+</div>
+<div data-col="66">
+    <h2>Latest Tweets</h2>
+    <ul>
+        <li ng-repeat="tweet in data.tweets" class="tweet" data-col="33">
+            <h3><a href="{{tweet.permalinkURL}}">{{tweet.time}}</a></h3>
+            <img ng-if="tweet.image" ng-src="{{tweet.image}}" />
+            <p ng-bind-html="tweet.tweet"></p>
+        </li>
+    </ul>
+</div>

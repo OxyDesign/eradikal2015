@@ -302,6 +302,35 @@ body{
         line-height:2rem;
         margin-bottom:1rem;
     }
+    .flip-container{
+        perspective: 1000;
+        padding-bottom:100%;
+        margin-bottom:1.5rem;
+        .inside-container{
+            position:relative;
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            .front-image,
+            .back-image{
+                width:100%;
+                position:absolute;
+                top:0;
+                left:0;
+                backface-visibility: hidden;
+            }
+            .front-image{
+                z-index:2;
+                transform: rotateY(0deg);
+            }
+            .back-image{
+                z-index:1;
+                transform: rotateY(180deg);
+            }
+        }
+        &.flipped .inside-container{
+            transform: rotateY(180deg);
+        }
+    }
     .tweet{
         padding-top:1.5rem;
         margin-top:1.5rem;
@@ -671,6 +700,7 @@ nav{
         box-sizing:border-box;
         float:left;
         padding:0 2% 0 2%;
+        min-height:1px;
         &[data-col*="right"]{
             float:right;
         }

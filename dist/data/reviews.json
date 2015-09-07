@@ -2,12 +2,12 @@
     "releases":[
         {
             "name":"Pavillon 666",
-            "url":"http://www.pavillon666.fr/chronique-metal-6453.php",
+            "url":"http://www.pavillon666.fr/webzine/chroniques/chroniques-albums-cd/chroniques-albums-cd-detail.php?groupe=6453",
             "lang":"FR"
         },
         {
             "name":"VS Webzine",
-            "url":"http://www.vs-webzine.com/news.php?page=kronik&amp;id_news=12883",
+            "url":"http://www.vs-webzine.com/chronique-ERADIKAL_INSANE-The_Dementia_Process-12883.html",
             "lang":"FR"
         },
         {
@@ -31,30 +31,15 @@
             "lang":"FR"
         },
         {
-            "name":"Ody Metal",
-            "url":"http://www.myspace.com/odymetal/blog/544583149",
-            "lang":"FR"
-        },
-        {
             "name":"French Metal",
             "url":"http://www.french-metal.com/chroniques/eradikalinsane.html",
-            "lang":"FR"
-        },
-        {
-            "name":"Metal Chroniques",
-            "url":"http://www.metalchroniques.fr/guppy/articles.php?lng=fr&amp;pg=6068",
             "lang":"FR"
         }
     ],
     "live":[
         {
-            "name":"Chroniques de Jo",
-            "url":"http://leschroniquesdejo.over-blog.com/2014/05/soiree-du-10-mai.html",
-            "lang":"FR"
-        },
-        {
-            "name":"Chroniques de Jo",
-            "url":"http://leschroniquesdejo.over-blog.com/2014/05/soiree-du-10-mai.html",
+            "name":"Pavillon 666",
+            "url":"http://www.pavillon666.fr/webzine/chroniques/chroniques-de-concerts/chroniques-de-concerts-detail.php?groupe=68",
             "lang":"FR"
         },
         {

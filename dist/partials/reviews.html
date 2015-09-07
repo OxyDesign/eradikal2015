@@ -3,7 +3,7 @@
     <h2>Releases</h2>
     <ul class="reviews">
         <li ng-repeat="review in data.releases" class="review">
-            <a href="{{review.url}}">{{review.name}} ({{review.lang}})</a>
+            <a target="_blank" href="{{review.url}}">{{review.name}} ({{review.lang}})</a>
         </li>
     </ul>
 </div>
@@ -11,7 +11,7 @@
     <h2>Live</h2>
     <ul class="reviews">
         <li ng-repeat="review in data.live" class="review">
-            <a href="{{review.url}}">{{review.name}} ({{review.lang}})</a>
+            <a target="_blank" href="{{review.url}}">{{review.name}} ({{review.lang}})</a>
         </li>
     </ul>
 </div>
@@ -19,7 +19,7 @@
     <h2>Interviews</h2>
     <ul class="reviews">
         <li ng-repeat="review in data.itv" class="review">
-            <a href="{{review.url}}">{{review.name}} ({{review.lang}})</a>
+            <a target="_blank" href="{{review.url}}">{{review.name}} ({{review.lang}})</a>
         </li>
     </ul>
 </div>

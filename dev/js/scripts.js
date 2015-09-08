@@ -16,7 +16,10 @@ eradikalApp.controller('playCtrl', ['$scope', '$http', function($scope,$http) {
     };
 }]);
 
-eradikalApp.controller('viewCtrl', ['$scope', '$element', function($scope,$element) {
+eradikalApp.controller('viewCtrl', ['$scope', '$element', '$window', '$location', function($scope,$element,$window,$location) {
+    $scope.$on('$viewContentLoaded', function() {
+        $window.ga('send', 'pageview', { page: $location.url() });
+    });
     $scope.$on('$routeChangeStart', function(){
         $element.addClass('loading');
     });

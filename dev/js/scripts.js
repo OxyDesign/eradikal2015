@@ -1,3 +1,5 @@
+document.querySelector('html').classList.add('js');
+
 var eradikalApp = angular.module('eradikalApp',['ngSanitize','ngRoute']);
 
 eradikalApp.controller('navCtrl', ['$scope', function($scope) {

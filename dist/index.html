@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="Eradikal Insane - Official Website - French Death Metal" />
     <meta name="keywords" content="eradikal insane, death, metal, deathcore, technical, hardcore, france, french, brutal, mithra, dementia process" />
+    <meta name="theme-color" content="#333333">
     <link rel="stylesheet" href="styles/style.css"></head>
     <script src="libs/twitterFetcher.js"></script>
     <script src="libs/angular.min.js"></script>
@@ -27,7 +28,16 @@
     <div id="logo"></div>
     <div id="car"></div>
     <div id="app" ng-controller="viewCtrl" class="loading">
-        <div ng-view class="section"></div>
+        <div ng-view class="section">
+            <p>Eradikal Insane is a French death metal band that formed in Marseille, France, in 2004. The group consists of guitarists and founders Nicolas and Florian Escoffier, vocalist Cyril "Jtrom" Van Zandijcke, drummer R and bassist Loris Guillen. According to members, the name of the band is a neologism to describe a very high level of craziness. The band has released three demos and one EP."</p>
+            <p>A digital single "Born From Punishment" was released on August 1, 2009."</p>
+            <p>On September 27, 2010, the band entered the Studio Hyperion in Marseille to record a first EP The Dementia Process, which was released on April 16, 2011. This first effort received positive ratings by French and international webzines."</p>
+            <p>Following the release of the EP and promotional shows, Eradikal Insane launched its debut music video for the song "God Bless You" on September 23, 2012."</p>
+            <p>After almost two years of touring and writing, the band entered the studio to record its debut album Mithra on January 5, 2014, tentatively scheduled for late 2014 release. In the same year, the band played some shows in France and went on a ten days long tour in Russia. Due to problems with the studio and the production, the album was postponed until 2015."</p>
+            <p>Back from a French tour including a show in Luxembourg during May 2015, Eradikal Insane announced Mithra to be out September 7, 2015, which will be followed by a tour in Canada in the same month.</p>
+            <img src="content/home/home1.jpg" />
+            <img src="content/home/home2.jpg" />
+        </div>
         <nav ng-controller="navCtrl" ng-click="navOpen = false" ng-class="{'active' : navOpen}">
             <div class="inner-nav">
                 <ul>
